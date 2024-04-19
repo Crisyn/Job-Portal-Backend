@@ -2,6 +2,7 @@ package org.chrisjakob.jobbackend.job;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jdk.jshell.spi.ExecutionControl;
+import org.chrisjakob.jobbackend.job.Entity.Job;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.*;
