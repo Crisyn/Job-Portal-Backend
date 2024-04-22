@@ -26,8 +26,8 @@ public class Job {
     @Column(name = "jobLocation")
     public String jobLocation;
 
-    @Column(name = "emplymentType")
-    public String emplymentType;
+    @Column(name = "employmentType")
+    public String employmentType;
 
     @Column(name = "favorited")
     public boolean favorited;
