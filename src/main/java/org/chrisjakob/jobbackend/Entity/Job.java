@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 public class Job {
     @Id
     @Column(name = "id")
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public int id;
 
     @Column(name = "jobName")

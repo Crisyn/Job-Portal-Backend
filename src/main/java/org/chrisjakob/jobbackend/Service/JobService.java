@@ -22,4 +22,12 @@ public class JobService {
     public Job getJobById(int id) {
         return jobRepo.findById(id).get();
     }
+
+   public Job findJobByName(String name) {
+        return jobRepo.findByJobName(name);
+   }
+
+   public void deleteJobById(int id) {
+        jobRepo.deleteById(id);
+   }
 }

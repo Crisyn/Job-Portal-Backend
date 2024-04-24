@@ -25,4 +25,14 @@ public class JobController {
     public List<Job> getJobs() {
         return jobService.getAllJobs();
     }
+
+    @GetMapping("/job/{search}")
+    public Job getJobs(@PathVariable(value = "search" ) String search) {
+        return jobService.findJobByName(search);
+    }
+
+    @DeleteMapping("/delJob/{id}")
+    public void deleteJob(@PathVariable(value = "id" ) int id) {
+        jobService.deleteJobById(id);
+    }
 }
