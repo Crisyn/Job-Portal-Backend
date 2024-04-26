@@ -34,5 +34,6 @@ public class JobController {
     @DeleteMapping("/delJob/{id}")
     public void deleteJob(@PathVariable(value = "id" ) int id) {
         jobService.deleteJobById(id);
+        jobService.updateJobId(id);
     }
 }

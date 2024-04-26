@@ -20,8 +20,8 @@ public class Job {
     @Column(name = "jobName")
     public String jobName;
 
-    @Column(name = "jobShortDescription")
-    public String jobShortDescription;
+    @Column(name = "jobDescription")
+    public String jobDescription;
 
     @Column(name = "jobLocation")
     public String jobLocation;

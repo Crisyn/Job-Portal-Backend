@@ -30,4 +30,10 @@ public class JobService {
    public void deleteJobById(int id) {
         jobRepo.deleteById(id);
    }
+
+   public void updateJobId(int id){
+        if (id - 1 != 0) {
+        }
+   }
+
 }
