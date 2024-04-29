@@ -13,7 +13,8 @@ public class JobController {
 
     @PostMapping("/addJob")
     public Job addJob(@RequestBody Job job) {
-        return jobService.saveJob(job);
+        return jobService.saveJob(job)
+;
     }
 
     @GetMapping("/jobs/{id}")
@@ -34,6 +35,5 @@ public class JobController {
     @DeleteMapping("/delJob/{id}")
     public void deleteJob(@PathVariable(value = "id" ) int id) {
         jobService.deleteJobById(id);
-        jobService.updateJobId(id);
     }
 }

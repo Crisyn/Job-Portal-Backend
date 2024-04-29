@@ -4,6 +4,7 @@ import org.chrisjakob.jobbackend.Entity.Job;
 import org.chrisjakob.jobbackend.Repository.JobRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
 
 @Service
@@ -23,17 +24,12 @@ public class JobService {
         return jobRepo.findById(id).get();
     }
 
-   public Job findJobByName(String name) {
+    public Job findJobByName(String name) {
         return jobRepo.findByJobName(name);
-   }
+    }
 
-   public void deleteJobById(int id) {
+    public void deleteJobById(int id) {
         jobRepo.deleteById(id);
-   }
-
-   public void updateJobId(int id){
-        if (id - 1 != 0) {
-        }
-   }
+    }
 
 }
