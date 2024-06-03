@@ -31,4 +31,7 @@ public class Job {
 
     @Column(name = "favorited")
     public boolean favorited;
+
+    @Column(name = "eMail")
+    public String eMail;
 }
