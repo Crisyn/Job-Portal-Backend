@@ -17,7 +17,7 @@ public class JobController {
 ;
     }
 
-    @GetMapping("/jobs/{id}")
+    @GetMapping("/job/{id}")
     public Job getJobs(@PathVariable(value = "id" ) int id) {
         return jobService.getJobById(id);
     }
@@ -27,9 +27,9 @@ public class JobController {
         return jobService.getAllJobs();
     }
 
-    @GetMapping("/job/{search}")
-    public Job getJobs(@PathVariable(value = "search" ) String search) {
-        return jobService.findJobByName(search);
+    @GetMapping("/jobs/{search}")
+    public List<Job> getJobs(@PathVariable(value = "search" ) String search) {
+        return jobService.jobRepo.findByJobNameContains(search);
     }
 
     @DeleteMapping("/delJob/{id}")

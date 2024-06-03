@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface JobRepo extends JpaRepository<Job, Integer> {
-    public Job findByJobName(String jobName);
+    List<Job> findByJobNameContains(String jobName);
 }

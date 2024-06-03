@@ -10,7 +10,7 @@ import java.util.List;
 @Service
 public class JobService {
     @Autowired
-    private JobRepo jobRepo;
+    public JobRepo jobRepo;
 
     public Job saveJob(Job job) {
         return jobRepo.save(job);
@@ -22,10 +22,6 @@ public class JobService {
 
     public Job getJobById(int id) {
         return jobRepo.findById(id).get();
-    }
-
-    public Job findJobByName(String name) {
-        return jobRepo.findByJobName(name);
     }
 
     public void deleteJobById(int id) {
